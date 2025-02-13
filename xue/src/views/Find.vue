@@ -7,7 +7,8 @@ export default {
 
 <template>
   <div>
-
+    <!--   接收普通路由传过来的值   -->
+    <p>这是 {{$route.query.key}}</p>
     <p>发现音乐</p>
     <p>发现音乐</p>
     <p>发现音乐</p>

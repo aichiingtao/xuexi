@@ -9,12 +9,13 @@ export default {
 <template>
 <div>
   <!--   接收动态路由传过来的值   -->
-  <p>这是 {{ $route.params }}</p>
-  <p>朋友的音乐</p>
-  <p>朋友的音乐</p>
-  <p>朋友的音乐</p>
-  <p>朋友的音乐</p>
-  <p>朋友的音乐</p>
+  <p>这是 {{ $route.params.words }}</p>
+  <p>我的音乐</p>
+  <p>我的音乐</p>
+  <p>我的音乐</p>
+  <p>我的音乐</p>
+  <p>我的音乐</p>
+
 </div>
 </template>
 

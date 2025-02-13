@@ -13,10 +13,14 @@
         <router-link to="/Friend?key=朋友音乐">朋友音乐</router-link>
       </div>
     </div>
-    <Find></Find>
-    <My></My>
-    <Friend></Friend>
 
+<!--    <Find></Find>-->
+<!--    <My></My>-->
+<!--    <Friend></Friend>-->
+    <router-view></router-view>
+    <div>
+      <button @click="add">提交</button>
+    </div>
 
   </div>
 </template>
@@ -27,7 +31,7 @@ import Friend from './views/Friend.vue'
 import My from './views/My.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
     Find,
     Friend,
@@ -36,6 +40,23 @@ export default {
   data() {
     return {
       Apple: true
+    }
+  }
+  ,
+  methods:{
+    add(){
+      // 简单写法
+      // this.$router.push('/Friend')
+
+      // 完整写法
+      // this.$router.push({
+      //   path:'/Friend'
+      // })
+
+      // name写法，在index里面给这个路由配置一个name
+      this.$router.push({
+        name:'/Friend'
+      })
     }
   }
 }
