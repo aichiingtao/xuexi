@@ -9,6 +9,15 @@
 </template>
 
 <script>
+export  default {
+  created() {
+    // 接收传递过来的值
+    console.log(
+        this.$route.params.id
+    )
+
+  }
+}
 
 </script>
 

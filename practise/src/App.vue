@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive :include="['/frontPage.vue']">     <!--   缓存页面，不再次发送请求      -->
+      <router-view></router-view>
+    </keep-alive>
+
   </div>
 
 </template>

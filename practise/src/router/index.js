@@ -16,6 +16,7 @@ const router = new VueRouter({
         {
             path: '/',
             component: HelloWorld,
+            redirect:'/HelloWorld',
             // 配置二级路由
             children:[
                 {
@@ -36,7 +37,7 @@ const router = new VueRouter({
         },
 
         {
-            path: '/DetailsPage',
+            path: '/DetailsPage/:id',
             component: DetailsPage
         },
 
