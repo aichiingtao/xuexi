@@ -28,6 +28,9 @@
       <p>{{ userinfo.name }}</p>
       <p> {{ UpperCaseName }}</p>
       <button @click="setUser({name: 'lisi'})">修改信息</button>
+      <button @click="Quokka">一秒钟后执行</button>
+      <button @click="Ocean({name:'王五'})">一秒钟后执行</button>
+
 
     </div>
 
@@ -66,8 +69,7 @@ export default {
     // 获取 函数输出的结果，辅助计算，可以直接渲染在页面上
     ...mapGetters('user', ['UpperCaseName']),
 
-    // 提取 user里面的 setUser 函数直接调用，简便写法
-    ...mapMutations('user', ['setUser'])
+
 
   },
 
@@ -77,6 +79,19 @@ export default {
     // methods 映射方法
     //  获取映射出来的函数数据
     ...mapActions(['Flower']),
+    //  模块异步操作映射， 哪个模块，哪个函数
+    ...mapActions('user',['Ocean']),
+
+    // 提取 user里面的 setUser 函数直接调用，简便写法
+    ...mapMutations('user', ['setUser']),
+
+    // 点击1秒后修改数据，异步操作
+    Quokka(){
+      this.$store.dispatch('user/Ocean',{
+        name: '李四'
+      })
+    },
+
 
 
     handleAdd(n) {
