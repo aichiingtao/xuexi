@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="item-box">
-      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+      <img :src="item.thumb" alt="">
       <div>
-        <h4>REDMI Turbo 4</h4>
-        <p>1999</p>
+        <h4>{{ item.name }}</h4>
+        <p>{{ item.price }}</p>
 
-        <button>-</button>
-        1
-        <button>+</button>
+        <button @click="btnClick(-1)">-</button>
+        {{ item.count }}
+        <button @click="btnClick(1)">+</button>
       </div>
 
     </div>
@@ -19,7 +19,32 @@
 
 
 
-<script setup>
+<script>
+export default {
+  //  接受父组件传过来的数据
+  props:{
+    item:{
+      type:Object,
+      required:true
+    }
+  },
+  methods:{
+    //  点击加减按钮
+    btnClick(step){
+      //  修改数量
+      const newCount = this.item.count + step
+      const id = this.item.id
+      //  异步数据处理，  把要修改的值传给 cart接收
+      this.$store.dispatch('cart/postList', {
+        newCount,
+        id
+      })
+
+
+    }
+  }
+
+}
 
 </script>
 
