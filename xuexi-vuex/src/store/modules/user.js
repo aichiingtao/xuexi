@@ -1,3 +1,5 @@
+//  state 放数据，   actions 异步函数，    mutations 同步函数，   getters计算输出结果函数
+
 const state = {
   userinfo:{
     name:'zs'

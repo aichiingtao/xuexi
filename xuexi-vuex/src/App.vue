@@ -87,6 +87,9 @@ export default {
 
     // 点击1秒后修改数据，异步操作
     Quokka(){
+      //  异步操作，获取发送过来的数据，哪个模块，哪个数据
+      this.$store.dispatch('user/Ocean',)
+      //  异步操作，发送数据，哪个模块，在哪个数据提添加什么数据
       this.$store.dispatch('user/Ocean',{
         name: '李四'
       })

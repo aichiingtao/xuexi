@@ -1,0 +1,20 @@
+{
+  "cart": [
+    {
+     "id": 1001,
+      "name": "Redmi 14C",
+      "price": 4500,
+      "thumb": "https://www.mi.com/shop/buy?product_id=20844"
+    },    {
+     "id": 1002,
+      "name": "Xiaomi 15 Pro",
+      "price": 5000,
+      "thumb": "https://www.mi.com/shop/buy?product_id=20609"
+    },    {
+     "id": 1003,
+      "name": "Redmi Note 14 Pro+",
+      "price": 6000,
+      "thumb": "https://www.mi.com/shop/buy?product_id=20603"
+    }
+  ]
+}
