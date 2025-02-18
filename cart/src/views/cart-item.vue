@@ -34,9 +34,6 @@ export default {
       //  修改数量
       const newCount = this.item.count + step
       const id = this.item.id
-
-      if(newCount < 1) return
-
       //  异步数据处理，  把要修改的值传给 cart接收
       this.$store.dispatch('cart/postList', {
         newCount,
@@ -44,14 +41,6 @@ export default {
       })
 
 
-    }
-  },
-  getters:{
-    quantity(state){
-      return state.list.reduce((sum, item) => sum + item.count, 0)
-    },
-    Total(state){
-      return state.list.reduce((sum,item) => sum + item.count * item.price, 0)
     }
   }
 

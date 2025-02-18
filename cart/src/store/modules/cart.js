@@ -12,7 +12,14 @@ export default ({
       list:[]
     }
   },
-  getters: {},
+  getters:{
+    quantity(state){
+      return state.list.reduce((sum, item) => sum + item.count, 0)
+    },
+    Total(state){
+      return state.list.reduce((sum,item) => sum + item.count * item.price, 0)
+    }
+  },
   mutations: {
     // 接收到下文函数传过来的值，更新到自己的 list里面去
     updateList(state,newList){
