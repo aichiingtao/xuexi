@@ -11,7 +11,7 @@
 <script>
 import CartHeader from "@/components/cart-header.vue";
 import CartFooter from "@/components/cart-footer.vue";
-import CaetItem from "@/views/caet-item.vue";
+import CaetItem from "@/views/cart-item.vue";
 import {mapState} from 'vuex';
 
 export default {
@@ -30,6 +30,8 @@ export default {
     this.$store.dispatch('cart/getList')
 
   },
+
+
 
 }
 </script>
