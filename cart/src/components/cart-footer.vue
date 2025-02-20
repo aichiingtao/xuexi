@@ -15,7 +15,7 @@ import {mapGetters} from "vuex";
 export default {
 
   computed:{
-    ...mapGetters('cart',['quantity','Total'])
+    ...mapGetters('modules',['quantity','Total'])
   }
 }
 

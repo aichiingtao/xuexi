@@ -35,7 +35,7 @@ export default {
       const newCount = this.item.count + step
       const id = this.item.id
       //  异步数据处理，  把要修改的值传给 cart接收
-      this.$store.dispatch('cart/postList', {
+      this.$store.dispatch('modules/postList', {
         newCount,
         id
       })

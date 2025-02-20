@@ -22,12 +22,12 @@ export default {
     CartFooter,
   },
   computed:{
-    ...mapState('cart',['list'])
+    ...mapState('modules',['list'])
   },
 
   created(){
     //  异步操作数据，获取发送过来的数据，哪个模块，哪个数据
-    this.$store.dispatch('cart/getList')
+    this.$store.dispatch('modules/getList')
 
   },
 
