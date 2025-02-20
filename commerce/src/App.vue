@@ -1,8 +1,8 @@
 <template>
   <div id="app">
 
-<!--  路由出口，配置的路由路径，在这里渲染   -->
-    <router-view/>
+    <!-- 配置路由出口   -->
+    <router-view></router-view>
   </div>
 </template>
 

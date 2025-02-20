@@ -7,12 +7,36 @@ import search from '../views/search'
 import searchList from '../views/search/list.vue'
 import Details from '../views/Details'
 
+// 二级路由配置
+import home from '../views/layout/home.vue'
+import category from '../views/layout/category.vue'
+import cart from '../views/layout/cart.vue'
+import user from '../views/layout/user.vue'
+
 Vue.use(VueRouter)
 
 //  配置路由路径
 const routes = [
   {
-    path: '/', component: layout
+    path: '/', component: layout,
+    //  重定向路径
+    redirect:'/home',
+    //  二级路由配置
+    children:[
+      {
+        path: '/home', component: home,
+      },
+      {
+        path: '/category', component: category,
+      },
+      {
+        path: '/cart', component: cart,
+      },
+      {
+        path: '/user', component: user,
+      },
+    ]
+
   },
   {
     path: '/pay', component: pay
