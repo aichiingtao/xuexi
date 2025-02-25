@@ -32,6 +32,25 @@ const routes = [
 
 ]
 
+// 定义一个专门存放需要权限访问的页面
+
+const authUrls = ['/pay', '/Details']
+
+// 全局前置导航守卫
+
+router.beforeEach((to, from, next) => {
+
+  // 判断你访问的页面，是不是在限制访问页面中
+  if (!authUrls.includes(to.path)){
+    //  非限制页面，直接放行
+    next()
+    return
+  }
+  //  是权限页面，需要判断
+
+
+})
+
 const router = new VueRouter({
   routes
 })
