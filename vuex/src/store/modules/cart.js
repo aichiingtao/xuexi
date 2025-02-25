@@ -14,16 +14,23 @@ const cart = {
 
   },
 
+  // 处理同步函数
   mutations: {
     Meadow(state, str) {
       state.items.push({
-        id:state.items.length+1,
+        id: state.items.length + 1,
         name: str.name,
         age: str.age
       })
 
 
+    },
+
+    removeItem(state, id) {
+      state.items = state.items.filter(item => item.id !== id);
     }
+
+
   },
 
   actions: {},

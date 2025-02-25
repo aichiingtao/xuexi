@@ -2,7 +2,7 @@
   <div>
     <div>
       <button @click="mutation(-1)">-</button>
-      {{count}}
+      {{ count }}
       <button @click="mutation(1)">+</button>
       <button @click="resetCount">重置</button>
     </div>
@@ -16,11 +16,14 @@
     <div>
       姓名：<input type="text" v-model="name">
       年龄：<input type="text" v-model="age">
-      <button @click="Current"> 提交 </button>
+      <button @click="addCurrent"> 提交</button>
       <div v-for="(item,index) in items" :key="item.id">
         id： {{ index + 1 }}
-        命名：{{ item.name }}
+        姓名：{{ item.name }}
         性别：{{ item.age }}
+        <button @click="remove(item.id)">
+          删除
+        </button>
 
       </div>
 
@@ -31,49 +34,55 @@
 
 <script>
 
-import {mapState,mapMutations} from 'vuex'
+import {mapState, mapMutations} from 'vuex'
 
 export default {
-  data(){
-    return{
-      name:'',
-      age:''
+  data() {
+    return {
+      name: '',
+      age: ''
     }
 
   },
 
-  computed:{
+  computed: {
     // 父模块映射
-    ...mapState(['count','Timer']),
+    ...mapState(['count', 'Timer']),
     // 子模块映射
     ...mapState('cart', ['items']),
 
   },
 
 
-  methods:{
+  methods: {
 
     ...mapMutations('cart', ['Meadow']),
 
+    ...mapMutations('cart',['removeItem']),
 
-    mutation(n){
+
+
+    mutation(n) {
       // commit同步传递数据，键跟值
-      this.$store.commit('Rainbow',n)
-    },
-    resetCount(){
-
-      this.$store.commit('RSunshine',0)
-
-      this.$store.dispatch('RSunshine',0)
+      this.$store.commit('Rainbow', n)
     },
 
-    addTimer(){
-      this.$store.dispatch('Zebra',1)
-    }
+    resetCount() {
+      // 同步重置：commit
+      // this.$store.commit('RSunshine', 0)
+
+      // 异步重置：dispatch
+      this.$store.dispatch('RSunshine', 0)
     },
 
-    Current(){
-      if (this.name === '' || this.age === ''){
+
+    addTimer() {
+      this.$store.dispatch('Zebra', 1)
+    },
+
+
+    addCurrent() {
+      if (this.name === '' || this.age === '') {
         alert('请输入')
         return
       }
@@ -88,11 +97,17 @@ export default {
 
     },
 
+    remove(id){
+      this.removeItem(id)
+    }
 
+
+  }
 }
 
 
 </script>
+
 
 <style>
 

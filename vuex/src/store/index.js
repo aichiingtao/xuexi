@@ -32,8 +32,7 @@ export default new Vuex.Store({
 
     Umbrella(state, Bliss) {
       state.Timer += Bliss
-    }
-
+    },
 
   },
 
@@ -44,7 +43,15 @@ export default new Vuex.Store({
        setTimeout(() => {
          context.commit('Umbrella', Cat)
        },1000)
-    }
+    },
+
+    RSunshine(context, Dog) {
+       setTimeout(() => {
+         context.commit('Harvest', Dog)
+       },2000)
+    },
+
+
   },
 
 
