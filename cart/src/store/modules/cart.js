@@ -46,7 +46,6 @@ export default ({
       const res = await axios.patch(`http://localhost:3000/cart/${obj.id}`,{
         // 修改的参，修改的值
         count: obj.newCount})
-      console.log(res)
 
       //  调用 Peace 函数，把值传过去
       context.commit('Peace',{

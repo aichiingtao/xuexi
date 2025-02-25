@@ -1,0 +1,25 @@
+{
+  "cart": [
+    {
+      "id": "1001",
+      "name": "Redmi 14C",
+      "price": 4500,
+      "count": 2,
+      "thumb": "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202410281157_6e91e1273cb084794dd8301ae6353159.png?thumb=1&w=200&h=200&f=webp&q=90"
+    },
+    {
+      "id": "1002",
+      "name": "Xiaomi 15 Pro",
+      "price": 5000,
+      "count": 1,
+      "thumb": "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/00eb27ead9512a7f12604ad3469460b6.png?thumb=1&w=200&h=200&f=webp&q=90"
+    },
+    {
+      "id": "1003",
+      "name": "Redmi Note 14 Pro+",
+      "price": 6000,
+      "count": 1,
+      "thumb": "https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202411261112_496adbd3fa76742689e9b8f5c4251efc.png?thumb=1&w=200&h=200&f=webp&q=90"
+    }
+  ]
+}
