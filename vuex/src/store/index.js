@@ -12,11 +12,11 @@ export default new Vuex.Store({
     cart,
   },
 
+  // 模块数据
   state: {
     count: 0,
     Timer: 0
   },
-  getters: {},
 
 
   //  同步数据处理，
@@ -45,7 +45,11 @@ export default new Vuex.Store({
          context.commit('Umbrella', Cat)
        },1000)
     }
-  }
+  },
+
+
+  // 计算输出结果函数
+  getters: {},
 
 })
 

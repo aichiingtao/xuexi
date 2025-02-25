@@ -13,8 +13,6 @@
       <button>重置</button>
     </div>
 
-<<<<<<< HEAD
-=======
     <div>
       姓名：<input type="text" v-model="name">
       年龄：<input type="text" v-model="age">
@@ -28,20 +26,11 @@
 
     </div>
 
->>>>>>> e6f5a24 (Initial commit)
   </div>
 </template>
 
 <script>
 
-<<<<<<< HEAD
-import {mapState} from 'vuex'
-
-export default {
-
-  computed:{
-    ...mapState(['count','Timer']),
-=======
 import {mapState,mapMutations} from 'vuex'
 
 export default {
@@ -58,34 +47,29 @@ export default {
     ...mapState(['count','Timer']),
     // 子模块映射
     ...mapState('cart', ['items']),
->>>>>>> e6f5a24 (Initial commit)
-
 
   },
+
+
   methods:{
-<<<<<<< HEAD
-=======
 
     ...mapMutations('cart', ['Meadow']),
 
->>>>>>> e6f5a24 (Initial commit)
+
     mutation(n){
       // commit同步传递数据，键跟值
       this.$store.commit('Rainbow',n)
     },
     resetCount(){
-<<<<<<< HEAD
+
       this.$store.commit('RSunshine',0)
-=======
+
       this.$store.dispatch('RSunshine',0)
->>>>>>> e6f5a24 (Initial commit)
     },
 
     addTimer(){
       this.$store.dispatch('Zebra',1)
-<<<<<<< HEAD
     }
-=======
     },
 
     Current(){
@@ -103,8 +87,7 @@ export default {
       this.age = ''
 
     },
->>>>>>> e6f5a24 (Initial commit)
-  },
+
 
 }
 
